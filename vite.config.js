@@ -8,6 +8,11 @@ export default defineConfig({
     port: 3000,
   },
   resolve: {
-    alias: { src: "/src", components: "/src/components", assets: "/src/assets" },
+    alias: {
+      src: "/src",
+      components: "/src/components",
+      assets: "/src/assets",
+      modules: "/src/modules",
+    },
   },
 });
