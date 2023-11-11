@@ -1,4 +1,5 @@
 import { Button, Typography } from "antd";
+import { useNavigate } from "react-router-dom";
 
 // antd related
 const { Title } = Typography;
@@ -17,10 +18,14 @@ const style = {
 };
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div style={style.mainContainer}>
-      <Title style={{ color: "white" }}>Welcome to my testing site made using React with Vite!</Title>
-      <Button style={style.button}>Enter Site</Button>
+      <Title>A testing site made using React with Vite!</Title>
+      <Button style={style.button} onClick={() => navigate("/rhf")}>
+        Enter Site
+      </Button>
     </div>
   );
 };
